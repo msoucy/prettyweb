@@ -15,7 +15,7 @@
         window.removeEventListener('load', windowLoadHandler);
 
         document.getElementById('appcontent').addEventListener('DOMContentLoaded', function(e) {
-			var elements = e.originalTarget.getElementsByTagName("pre")
+			var elements = e.originalTarget.body.getElementsByTagName("pre")
 			console.log("Array: ", elements);
 			for(var i=0; i<elements.length; i++) {
 				var tag = elements[i];
