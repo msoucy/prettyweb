@@ -4,6 +4,7 @@
 
 <!DOCTYPE overlay SYSTEM "chrome://prettyweb/locale/cv-pls.dtd">
 
-<overlay id="cv-pls-browser-overlay-pretty" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<overlay id="prettyweb-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="text/javascript" src="chrome://prettyweb/content/stmd.js" />
   <script type="text/javascript" src="chrome://prettyweb/content/prettyweb.js" />
 </overlay>

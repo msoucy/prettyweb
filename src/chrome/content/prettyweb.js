@@ -1,27 +1,27 @@
 (function() {
 
-	alert("FOOBAR!");
-	var stmd = require('stmd');
 	var parser = new stmd.DocParser();
 	var renderer = new stmd.HtmlRenderer();
+	let console = (Cu.import("resource://gre/modules/devtools/Console.jsm", {})).console;
     
-    function handleText(textNode)
+    function handleText(tag)
     {
-        var v = textNode.nodeValue;
-        textNode.nodeValue = renderer.render(parser.parse(v));
+        var v = tag.firstChild.nodeValue;
+        tag.innerHTML = renderer.render(parser.parse(v));
     }
 
     function windowLoadHandler()
     {
-        // Dear Mozilla: I hate you for making me do this.
         window.removeEventListener('load', windowLoadHandler);
 
         document.getElementById('appcontent').addEventListener('DOMContentLoaded', function(e) {
-			document.log("Made it this far!"+e)
-			for(var tag in e.getElementsByTagName("pre")) {
-				alert(tag);
-				if(tag.childNodes.length == 1 && tag.childNodes[0].nodeType == 3) {
-					handle_text(tag);
+			var elements = e.originalTarget.getElementsByTagName("pre")
+			console.log("Array: ", elements);
+			for(var i=0; i<elements.length; i++) {
+				var tag = elements[i];
+				console.log("Tag: ", tag);
+				if(tag.childNodes.length == 1 && tag.firstChild.nodeType == 3) {
+					handleText(tag);
 				}
 			}
         });
