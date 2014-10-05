@@ -6,8 +6,7 @@
     
     function handleText(tag)
     {
-        var v = tag.firstChild.nodeValue;
-        tag.innerHTML = renderer.render(parser.parse(v));
+        tag.innerHTML = renderer.render(parser.parse(tag.firstChild.nodeValue));
     }
 
     function windowLoadHandler()
@@ -16,10 +15,10 @@
 
         document.getElementById('appcontent').addEventListener('DOMContentLoaded', function(e) {
 			if(!PrettyEnableButton.state) {return;}
-			var elements = e.originalTarget.body.getElementsByTagName("pre")
+			var elements =  [].slice.call(e.originalTarget.body.getElementsByTagName("pre"));
 			for(var i=0; i<elements.length; i++) {
 				var tag = elements[i];
-				if(tag.childNodes.length == 1 && tag.firstChild.nodeType == 3) {
+				if(tag.parentNode == e.originalTarget.body) {
 					handleText(tag);
 				}
 			}
