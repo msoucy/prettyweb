@@ -1,3 +1,4 @@
+// Object containing the plugin enable-state
 PrettyEnableButton = {
 	state: true,
 	toggle: function () {
