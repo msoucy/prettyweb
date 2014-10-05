@@ -15,13 +15,10 @@
 
         document.getElementById('appcontent').addEventListener('DOMContentLoaded', function(e) {
 			if(!PrettyEnableButton.state) {return;}
-			var elements =  [].slice.call(e.originalTarget.body.getElementsByTagName("pre"));
-			for(var i=0; i<elements.length; i++) {
-				var tag = elements[i];
-				if(tag.parentNode == e.originalTarget.body) {
-					handleText(tag);
-				}
-			}
+			[].slice.call(e.originalTarget.body.getElementsByTagName("pre")
+				).filter(function(tag) {return tag.parentNode == e.originalTarget.body;}
+				).forEach(function(tag) {handleText(tag);}
+				);
         });
     }
 
