@@ -6,5 +6,16 @@
 
 <overlay id="prettyweb-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <script type="text/javascript" src="chrome://prettyweb/content/stmd.js" />
+  <script type="text/javascript" src="chrome://prettyweb/content/button.js" />
   <script type="text/javascript" src="chrome://prettyweb/content/prettyweb.js" />
+  <!-- Firefox -->
+  <toolbarpalette id="BrowserToolbarPalette">
+    <!-- button details -->
+    <toolbarbutton id="prettyweb-button"
+                   label="PrettyWeb"
+                   tooltiptext="Toggle MD->HTML"
+                   oncommand="PrettyEnableButton.toggle()"
+                   class="toolbarbutton-1 chromeclass-toolbar-additional custombutton"
+    ></toolbarbutton>
+  </toolbarpalette>
 </overlay>
