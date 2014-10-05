@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
 <?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
+<?xml-stylesheet href="chrome://prettyweb/content/button.css" type="text/css"?>
 
 <!DOCTYPE overlay SYSTEM "chrome://prettyweb/locale/cv-pls.dtd">
 
@@ -15,7 +16,7 @@
                    label="PrettyWeb"
                    tooltiptext="Toggle MD->HTML"
                    oncommand="PrettyEnableButton.toggle()"
-                   class="toolbarbutton-1 chromeclass-toolbar-additional custombutton"
+                   class="toolbarbutton-1 chromeclass-toolbar-additional"
     ></toolbarbutton>
   </toolbarpalette>
 </overlay>
