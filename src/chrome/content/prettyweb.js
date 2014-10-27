@@ -1,8 +1,8 @@
 (function() {
 
-	// Load the stmd classes
-	var parser = new stmd.DocParser();
-	var renderer = new stmd.HtmlRenderer();
+	// Load the CommonMark classes
+	var parser = new commonmark.DocParser();
+	var renderer = new commonmark.HtmlRenderer();
 	// Debugging console
 	let console = (Cu.import("resource://gre/modules/devtools/Console.jsm", {})).console;
     
