@@ -1,1 +1,0 @@
-../../../stmd/js/stmd.js
