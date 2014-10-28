@@ -1,3 +1,4 @@
 content	prettyweb	chrome/content/	contentaccessible=yes
 style chrome://global/content/customizeToolbar.xul chrome://prettyweb/content/button.css
 overlay	chrome://browser/content/browser.xul	chrome://prettyweb/content/main.xul
+locale prettyweb en-US chrome/locale/en-US/

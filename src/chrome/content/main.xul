@@ -3,7 +3,7 @@
 <?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
 <?xml-stylesheet href="chrome://prettyweb/content/button.css" type="text/css"?>
 
-<!DOCTYPE overlay SYSTEM "chrome://prettyweb/locale/cv-pls.dtd">
+<!DOCTYPE overlay SYSTEM "chrome://prettyweb/locale/prettyweb.dtd">
 
 <overlay id="prettyweb-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <script type="text/javascript" src="chrome://prettyweb/content/commonmark.js" />
@@ -13,8 +13,8 @@
   <toolbarpalette id="BrowserToolbarPalette">
     <!-- button details -->
     <toolbarbutton id="prettyweb-button"
-                   label="PrettyWeb"
-                   tooltiptext="Toggle MD->HTML"
+                   label="&prettyweb.label;"
+                   tooltiptext="&prettyweb.tooltip;"
                    oncommand="PrettyEnableButton.toggle()"
                    class="toolbarbutton-1 chromeclass-toolbar-additional"
     ></toolbarbutton>
