@@ -2,7 +2,7 @@ XPI=prettyweb.xpi
 
 $(XPI): commonmark
 	cd src && \
-	zip -r ../$(XPI) chrome chrome.manifest install.rdf && \
+	zip -r ../$(XPI) chrome chrome.manifest install.rdf -x \*\*/.\* && \
 	cd ..
 
 commonmark:
