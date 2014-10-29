@@ -26,7 +26,7 @@
 		window.removeEventListener('load', windowLoadHandler);
 
 		document.getElementById('appcontent').addEventListener('DOMContentLoaded', function(e) {
-			if(!PrettyEnableButton.state) {return;}
+			if((!PrettyEnableButton.state) || e.originalTarget.body === undefined) {return;}
 			[].slice.call(e.originalTarget.body.getElementsByTagName("pre")
 				).filter(function(tag) {return tag.parentNode == e.originalTarget.body;}
 				).forEach(function(tag) {handleText(e.originalTarget, tag);}
