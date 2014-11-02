@@ -1,3 +1,4 @@
 [submodule "stmd"]
 	path = commonmark
 	url = git@github.com:jgm/CommonMark.git
+	ignore = dirty
